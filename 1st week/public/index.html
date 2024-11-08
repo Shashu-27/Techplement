@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote of the Day</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quote of the Day</h1>
+    <div id="quotedisplay">
+      <p id="quote-text">Press "Get Quote" for inspiration!</p>
+      <p id="quote-author"></p>
+    </div>
+    <button id="getQuoteButton">Get Quote</button>
+
+    <h2>Search by Author</h2>
+    <input type="text" id="author-search" placeholder="Enter author name">
+    <button id="searchButton">Search</button>
+    <div id="search-results"></div>
+
+    <div class="nav">
+      <button id="addQuoteButton">Add Quote</button>
+      <button id="updateQuoteButton">Update Quote</button>
+      <button id="deleteQuoteButton">Delete Quote</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
