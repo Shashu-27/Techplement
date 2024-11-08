@@ -46,23 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
   async function addQuote() {
     const quote = prompt("Enter the quote text:");
     const author = prompt("Enter the author name:");
-  
+
     if (!quote || !author) {
-      alert("Quote and author are required.");
-      return;
+        alert("Quote and author are required.");
+        return;
     }
-  
+
     try {
-      const response = await axios.post(`${apiUrl}/add`, { quote, author });
-      alert(response.data.message);  // Show success message from backend
-  
-      // Optionally, refresh quotes or update UI to show the new quote added
-      await fetchAndDisplayQuotes();  // This should call your function to refresh quotes in UI
+        const response = await axios.post(`${apiUrl}/add`, { quote, author });
+        alert(response.data.message);  // Show success message from backend
+        
+        try {
+            await fetchAndDisplayQuotes();  // Refresh quotes in UI
+        } catch (error) {
+            console.error('Error refreshing quotes:', error);
+            alert('Quote added');
+        }
+
     } catch (error) {
-      console.error('Error adding the quote:', error);
-      alert('Failed to add quote. Please try again.');
+        console.error('Error adding the quote:', error);
+        alert('Failed to add quote. Please try again.');
     }
-  }
+}
+
   
 
   // Function to update an existing quote

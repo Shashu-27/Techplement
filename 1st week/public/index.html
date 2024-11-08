@@ -3,29 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quote of the Day</title>
+  <title>Quotely</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Quote of the Day</h1>
-    <div id="quotedisplay">
-      <p id="quote-text">Press "Get Quote" for inspiration!</p>
-      <p id="quote-author"></p>
-    </div>
-    <button id="getQuoteButton">Get Quote</button>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Quotely Logo" />
+        <span class="site-name">Quotely</span>
+      </div>
+      <div class="nav-buttons">
+        <button id="addQuoteButton">Add Quote</button>
+        <button id="updateQuoteButton">Update Quote</button>
+        <button id="deleteQuoteButton">Delete Quote</button>
+      </div>
+    </nav>
+  </header>
 
-    <h2>Search by Author</h2>
-    <input type="text" id="author-search" placeholder="Enter author name">
-    <button id="searchButton">Search</button>
-    <div id="search-results"></div>
+  <main class="container">
+    <section id="quote-section">
+      <div id="quotedisplay">
+        <p id="quote-text">Press "Get Quote" for inspiration!</p>
+        <p id="quote-author"></p>
+      </div>
+      <button id="getQuoteButton">Get Quote</button>
+    </section>
 
-    <div class="nav">
-      <button id="addQuoteButton">Add Quote</button>
-      <button id="updateQuoteButton">Update Quote</button>
-      <button id="deleteQuoteButton">Delete Quote</button>
+    <section id="search-section">
+      <h2>Search by Author</h2>
+      <input type="text" id="author-search" placeholder="Enter author name">
+      <button id="searchButton">Search</button>
+      <div id="search-results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Quotely. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/shashank_shetty_27/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/ShashankSh74103" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Shashu-27" target="_blank"><i class="fab fa-github"></i></a>
+   
     </div>
-  </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
